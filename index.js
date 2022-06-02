@@ -66,6 +66,7 @@ class Memory {
   setSprite(index, value, version, userId) {
     const changes = array.set(this.sprites, index, value, version, userId)
     if (changes !== null) {
+      this.sprites[index] = changes
       this.emitter.emit(MEMORY_TYPE.SPRITES, index, changes)
     }
   }
@@ -79,6 +80,7 @@ class Memory {
   setTile(index, value, version, userId) {
     const changes = array.set(this.tiles, index, value, version, userId)
     if (changes !== null) {
+      this.tiles[index] = changes
       this.emitter.emit(MEMORY_TYPE.TILES, index, changes)
     }
     return changes
@@ -88,14 +90,11 @@ class Memory {
     return array.get(this.map, index)
   }
 
-  getMapValues() {
-    return this.map.map((tiny) => tiny.value)
-  }
-
   // The value should be an index into the tiles array
   setMap(index, value, version, userId) {
     const changes = array.set(this.map, index, value, version, userId)
     if (changes !== null) {
+      this.map[index] = changes
       this.emitter.emit(MEMORY_TYPE.MAP, index, changes)
     }
   }
@@ -113,6 +112,7 @@ class Memory {
       userId
     )
     if (changes !== null) {
+      this.users[userId] = changes
       this.emitter.emit(MEMORY_TYPE.USERS, userId, changes)
     }
   }
@@ -125,6 +125,7 @@ class Memory {
   setColor(index, value, version, userId) {
     const changes = array.set(this.palette, index, value, version, userId)
     if (changes !== null) {
+      this.palette[index] = changes
       this.emitter.emit(MEMORY_TYPE.PALETTE, index, changes)
     }
     return changes
