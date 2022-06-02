@@ -2,15 +2,15 @@ import EventEmitter from 'events'
 import * as array from './array.js'
 import * as flatObject from './flat-object.js'
 
-const SERVER_ID = '0123456789abcdef'
-const MAX_SPRITES = 64
-const MAX_TILES = 64
-const MAP_WIDTH = 16
-const MAP_HEIGHT = 16
-const SPRITE_WIDTH = 16
-const SPRITE_HEIGHT = 16
-const TILE_WIDTH = 16
-const TILE_HEIGHT = 16
+export const SERVER_ID = '0123456789abcdef'
+export const MAX_SPRITES = 64
+export const MAX_TILES = 64
+export const MAP_WIDTH = 16
+export const MAP_HEIGHT = 15
+export const SPRITE_WIDTH = 16
+export const SPRITE_HEIGHT = 16
+export const TILE_WIDTH = 16
+export const TILE_HEIGHT = 16
 
 const DEFAULT_SPRITE = new Array(SPRITE_WIDTH * SPRITE_HEIGHT).fill(0)
 const DEFAULT_SPRITES = new Array(MAX_SPRITES).fill(DEFAULT_SPRITE)
@@ -138,3 +138,5 @@ class Memory {
     return this.emitter.listenerCount(memoryType)
   }
 }
+
+export default Memory

@@ -1,8 +1,8 @@
 {
-  "name": "@silicon-jungle/tiny-merge",
+  "name": "@silicon-jungle/tiny-fantasy-console",
   "type": "module",
   "version": "0.0.0",
-  "description": "A tiny CRDT implemented in Javascript.",
+  "description": "A multiplayer & offline-first only fantasy console built on top of CRDT's.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
