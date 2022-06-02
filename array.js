@@ -5,7 +5,7 @@ export const create = (values, userId) => {
   for (let i = 0; i < arr.length; i++) {
     arr[i] = tiny.create(values[i], userId)
   }
-  return array
+  return arr
 }
 
 export const set = (arr, index, value, version, userId) => {
