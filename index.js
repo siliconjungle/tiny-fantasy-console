@@ -88,6 +88,10 @@ class Memory {
     return array.get(this.map, index)
   }
 
+  getMapValues() {
+    return this.map.map((tiny) => tiny.value)
+  }
+
   // The value should be an index into the tiles array
   setMap(index, value, version, userId) {
     const changes = array.set(this.map, index, value, version, userId)
