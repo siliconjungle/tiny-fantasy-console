@@ -9,7 +9,7 @@ export const create = (values, userId) => {
 }
 
 export const set = (arr, index, value, version, userId) => {
-  return tiny.update(arr[index], value, version, userId) !== null
+  return tiny.update(arr[index], value, version, userId)
 }
 
 export const get = (arr, index) => {

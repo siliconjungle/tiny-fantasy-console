@@ -1,7 +1,7 @@
 {
   "name": "@silicon-jungle/tiny-fantasy-console",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A multiplayer & offline-first only fantasy console built on top of CRDT's.",
   "main": "index.js",
   "scripts": {
